@@ -12,4 +12,7 @@ if(userInfo[2].toLowerCase().equals("y"))
 else
 	this.isPropertyManager = false;
 }
+	public String toString(){
+		return "Name: "+name+" Password: "+password+" isPropertuManager"+ isPropertyManager;
+	}
 }
