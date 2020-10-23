@@ -62,7 +62,7 @@ private void Login() {
 }
 
 private void Register() {
-	String userInfo[]= new String[2];
+	String userInfo[]= new String[3];
 	System.out.println("Enter your name");
 	userInfo[0] = scanner.nextLine();
 	System.out.println("set your password");
