@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class UserWriter extends UserConstant {
         }
 
         //Write JSON file
-        try (FileWriter file = new FileWriter(USER_FILE_NAME)) {
+        try (FileWriter file = new FileWriter(new File(USER_FILE_NAME))) {
 
             file.write(jsonUsers.toJSONString());
             file.flush();
