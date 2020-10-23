@@ -1,4 +1,3 @@
-
 public class User {
 private String name;
 private boolean isPropertyManager;
