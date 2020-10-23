@@ -62,15 +62,19 @@ private void Login() {
 }
 
 private void Register() {
-	String userInfo[]= new String[3];
+	String userInfo[]= new String[2];
 	System.out.println("Enter your name");
 	userInfo[0] = scanner.nextLine();
 	System.out.println("set your password");
 	userInfo[1] = scanner.nextLine();
 	System.out.println("are you a property manager?(y for yes and n for no)");
-	userInfo[2] = scanner.nextLine();
+	boolean isPropertyManager;
+	if (userInfo[2].toLowerCase().equals("y"))
+		isPropertyManager = true;
+	else
+		isPropertyManager = false;
 	System.out.println("Registration complete");
-	User user = new User(userInfo);
+	User user = new User(userInfo[0], userInfo[1], isPropertyManager);
 	//then load those info into database
 
 }

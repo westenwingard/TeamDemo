@@ -1,17 +1,39 @@
 public class User {
-private String name;
-private boolean isPropertyManager;
-private String password;
+	private String name;
+	private boolean isPropertyManager;
+	private String password;
 
-public User(String[] userInfo) {
-this.name = userInfo[0];
-this.password = userInfo[1];
-if(userInfo[2].toLowerCase().equals("y"))
-	this.isPropertyManager = true;
-else
-	this.isPropertyManager = false;
-}
-	public String toString(){
-		return "Name: "+name+" Password: "+password+" isPropertuManager"+ isPropertyManager;
+		public User(String name, String password, boolean isPropertyManager) {
+		this.name = name;
+		this.password = password;
+		this.isPropertyManager = isPropertyManager;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public boolean isPropertyManager() {
+		return isPropertyManager;
+	}
+
+	public void setPropertyManager(boolean propertyManager) {
+		isPropertyManager = propertyManager;
+	}
+
+	public String toString() {
+		return "Name: " + name + " Password: " + password + " isPropertuManager" + isPropertyManager;
 	}
 }
