@@ -6,7 +6,7 @@ public class test {
 
     public static void main(String[] args) throws FileNotFoundException {
         Users test = Users.getInstance();
-        test.addUser("one", "1", true);
-        test.addUser("two", "2", false);
+        test.addUser("three", "3", true);
+        System.out.println(test.toString());
     }
 }

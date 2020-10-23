@@ -13,11 +13,11 @@ public class UserLoader extends UserConstant{
         try {
             FileReader reader = new FileReader(new File(USER_FILE_NAME));
             JSONParser parser = new JSONParser();
-            Object obj = parser.parse(reader);
-            JSONArray userJSON = new JSONArray();
-            userJSON.add(obj);
 
-            if (!obj.toString().equals("{}")) {
+            JSONArray userJSON = (JSONArray) parser.parse(reader);
+
+
+            if (userJSON.size() >= 1) {
 
                 for (int i = 0; i < userJSON.size(); i++) {
                     JSONObject personJSON = (JSONObject) userJSON.get(i);

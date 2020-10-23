@@ -25,4 +25,16 @@ public class Users {
 		UserWriter.saveUser();
 	}
 
+	public static ArrayList<User> getUserList() {
+		return userList;
+	}
+
+	@Override
+	public String toString() {
+		String output = "";
+		for (User i : userList) {
+			output += i.getName() + "\n";
+		}
+		return output;
+	}
 }
